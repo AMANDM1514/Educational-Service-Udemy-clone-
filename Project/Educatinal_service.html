@@ -56,7 +56,7 @@
 </head>
 <body>
     <!-- Fixed Header -->
-    <header class="fixed-header">
+     <header class="fixed-header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">EduLearn</a>
@@ -68,25 +68,42 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Courses</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                                <li><a class="dropdown-item" href="#">Mobile Development</a></li>
+                                <li><a class="dropdown-item" href="#">Data Science</a></li>
+                                <li><a class="dropdown-item" href="#">Cloud Computing</a></li>
+                                <li><a class="dropdown-item" href="#">Artificial Intelligence</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">View All Courses</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Categories</a>
+                            <a class="nav-link" href="#categories">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
-                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
-
+                        <a href="login.html" class="btn btn-outline-primary px-4 me-2">Login</a>
+                        <a href="signup.html" class="btn btn-primary px-4 me-2">Sign Up</a>
+                        <a href="#" class="btn btn-outline-light position-relative">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9w3f34ORh_etfp4TjyU2Gzzvhac2MuGtGeQ&s" alt="cart" style="width: 30px; height: 30px;">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
