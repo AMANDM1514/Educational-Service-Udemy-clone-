@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Learning Platform</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            margin-top: 76px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .course-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">EduLearn</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1>Learn Without Limits</h1>
+            <p class="lead">Access over 1000+ courses from industry experts</p>
+            <div class="input-group w-75 mx-auto">
+                <input type="text" class="form-control" style="border-radius: 20px; margin-right: 10px;"  placeholder="Search for courses...">
+                <button class="btn btn-primary rounded-pill">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Featured Courses</h2>
+            <div class="row">
+                <!-- Course Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="course">
+                        <span class="badge bg-primary category-badge">Development</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Bootcamp</h5>
+                            <p class="card-text">Learn web development from scratch with practical projects.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary">$49.99</span>
+                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="course">
+                        <span class="badge bg-success category-badge">Design</span>
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX Design Masterclass</h5>
+                            <p class="card-text">Master the principles of modern UI/UX design.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary">$39.99</span>
+                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="course">
+                        <span class="badge bg-warning category-badge">Business</span>
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing Essential</h5>
+                            <p class="card-text">Learn to grow your business with digital marketing.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="text-primary">$29.99</span>
+                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Categories Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Popular Categories</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-code fs-1 text-primary mb-3"></i>
+                            <h5>Programming</h5>
+                            <p>300+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-palette fs-1 text-success mb-3"></i>
+                            <h5>Design</h5>
+                            <p>200+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line fs-1 text-warning mb-3"></i>
+                            <h5>Business</h5>
+                            <p>150+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-language fs-1 text-danger mb-3"></i>
+                            <h5>Languages</h5>
+                            <p>100+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dream Jobs Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Launch Your Career at <span class="text-primary">Top Companies</span></h2>
+            <p class="text-center mb-5">Our graduates work at leading technology companies worldwide</p>
+            <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center align-items-center">
+                <!-- Company logos with hover effect -->
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png" 
+                             class="img-fluid p-3" alt="Amazon" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" 
+                             class="img-fluid p-3" alt="Google" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1280px-Microsoft_logo.svg.png" 
+                             class="img-fluid p-3" alt="Microsoft" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/PayPal_Logo_Icon_2014.svg/1280px-PayPal_Logo_Icon_2014.svg.png" 
+                             class="img-fluid p-3" alt="PayPal" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYFAYrMJmzAyl4sdAEbhSacqKOEz0DiBsh9g&s" 
+                             class="img-fluid p-3" alt="Hitachi" style="max-height: 150px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNE3VDPS4miLdzgA0i6Q2e1FvTgDwlxnNW9g&s" 
+                             class="img-fluid p-3" alt="JP Morgan" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1280px-IBM_logo.svg.png" 
+                             class="img-fluid p-3" alt="IBM" style="max-height: 75px; object-fit: contain;">
+                    </div>
+                </div>
+                <div class="col text-center">
+                    <div class="card border-0 bg-transparent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/1280px-Indian_Space_Research_Organisation_Logo.svg.png" 
+                             class="img-fluid p-3" alt="ISRO" style="max-height: 120px; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg">View Job Opportunities</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About EduLearn</h5>
+                    <p>Empowering learners worldwide with quality education and practical skills.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">About Us</a></li>
+                        <li><a href="#" class="text-light">Contact</a></li>
+                        <li><a href="#" class="text-light">Terms of Service</a></li>
+                        <li><a href="#" class="text-light">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" style="border-radius: 20px; margin-right: 10px;" placeholder="Enter your email">
+                        <button class="btn btn-primary rounded-pill">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Smooth scroll for navigation links
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 76
+                    }, 800);
+                }
+            });
+
+            // Add shadow to header on scroll
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 50) {
+                    $('.fixed-header').css('box-shadow', '0 2px 4px rgba(0,0,0,0.1)');
+                } else {
+                    $('.fixed-header').css('box-shadow', 'none');
+                }
+            });
+
+            // Course card hover animation
+            $('.course-card').hover(
+                function() {
+                    $(this).addClass('shadow-lg');
+                },
+                function() {
+                    $(this).removeClass('shadow-lg');
+                }
+            );
+        });
+    </script>
+</body>
+</html>
