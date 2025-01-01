@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Purchase - EduLearn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .payment-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c');
+            background-size: cover;
+            color: white;
+            padding: 50px 0;
+        }
+
+        .payment-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .order-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .required-field::after {
+            content: "*";
+            color: red;
+            margin-left: 4px;
+        }
+
+        .card-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .secure-badge {
+            color: #28a745;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="Educational_service.html">EduLearn</a>
+        </div>
+    </nav>
+
+    <!-- Payment Header -->
+    <header class="payment-header">
+        <div class="container text-center">
+            <h1 class="display-4">Complete Your Purchase</h1>
+            <p class="lead">You're just one step away from starting your learning journey</p>
+        </div>
+    </header>
+
+    <!-- Payment Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="payment-form mb-4">
+                        <h3 class="mb-4">Payment Details</h3>
+                        <form id="paymentForm">
+                            <!-- Personal Information -->
+                            <h5 class="mb-3">Personal Information</h5>
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">First Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">Last Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">Email Address</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">Phone Number</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <!-- Billing Address -->
+                            <h5 class="mb-3">Billing Address</h5>
+                            <div class="row mb-4">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label required-field">Street Address</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">City</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">State/Province</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">Postal Code</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label required-field">Country</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Country</option>
+                                        <option value="IN">India</option>
+                                        <option value="US">United States</option>
+                                        <option value="UK">United Kingdom</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Card Details -->
+                            <h5 class="mb-3">Payment Method</h5>
+                            <div class="mb-4">
+                                <div class="mb-3">
+                                    <label class="form-label required-field">Card Number</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                        <span class="input-group-text">
+                                            <i class="fab fa-cc-visa card-icon"></i>
+                                            <i class="fab fa-cc-mastercard card-icon"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label required-field">Expiration Date</label>
+                                        <input type="text" class="form-control" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label required-field">CVV</label>
+                                        <input type="text" class="form-control" placeholder="123" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Complete Purchase</button>
+                            <div class="text-center mt-3">
+                                <span class="secure-badge">
+                                    <i class="fas fa-lock"></i> Secure Payment
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <h4 class="mb-4">Order Summary</h4>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Plan</span>
+                            <span class="fw-bold">Yearly Subscription</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Price</span>
+                            <span class="fw-bold">₹7,599</span>
+                        </div>
+
+                        <!-- Coupon Code Section -->
+                        <div class="mb-3">
+                            <label class="form-label">Have a coupon?</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter coupon code" id="couponInput">
+                                <button class="btn btn-outline-primary" type="button" id="applyCoupon">Apply</button>
+                            </div>
+                            <div id="couponMessage" class="form-text mt-2"></div>
+                        </div>
+
+                        <hr>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Total (Inc. GST)</span>
+                            <span class="fw-bold text-primary">₹7,599</span>
+                        </div>
+                        <div class="mt-4">
+                            <h5>What's included:</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Access to all courses</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Live Q&A sessions</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Course completion certificates</li>
+                                <li><i class="fas fa-check text-success me-2"></i>24/7 Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 EduLearn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your payment processing logic here
+            alert('Payment successful! Welcome to EduLearn.');
+            window.location.href = 'Educational_service.html';
+        });
+    </script>
+</body>
+</html>
