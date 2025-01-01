@@ -74,6 +74,14 @@
             transform: translateX(5px);
             transition: transform 0.3s ease;
         }
+
+        .hover-underline {
+            text-decoration: none;
+        }
+
+        .hover-underline:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -112,7 +120,7 @@
                             <a class="nav-link" href="#categories">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="#about-footer">About</a>
                         </li>
                     </ul>
                     <div class="d-flex">
@@ -326,7 +334,7 @@
     </section>
 
     <!-- Dream Jobs Section -->
-    <section class="py-5 bg-light"">
+    <section class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Launch Your Career at <span class="text-primary">Top Companies</span></h2>
             <p class="text-center mb-5">Our graduates work at leading technology companies worldwide</p>
@@ -526,10 +534,14 @@
                             </div>
                             <div class="mt-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <div class="display-4 me-3">100K+</div>
+                                    <div class="display-4 me-3">70K+</div>
                                     <div>Active learners worldwide</div>
                                 </div>
                                 <div class="d-flex align-items-center">
+                                    <div class="display-4 me-3">27K+</div>
+                                    <div>Access to top courses</div>
+                                </div>
+                                <div class="d-flex align-items-center mt-2">
                                     <div class="display-4 me-3">95%</div>
                                     <div>Course completion rate</div>
                                 </div>
@@ -658,7 +670,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4">
+    <footer class="bg-dark text-light mb-0 py-4" id="about-footer">
+        <header class="bg-dark text-light py-4">
+            <h5 style="padding-left: 30px; margin-bottom: 0px;"><strong>Top companies choose <span class="hover-underline" style="color:#8266ff">
+                EduLearn Business</span> to build in-demand career skills.</strong></h5>
+        </header>
+        <hr class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -681,6 +698,21 @@
                             placeholder="Enter your email">
                         <button class="btn btn-primary rounded-pill">Subscribe</button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 float-left">
+                    <h5 class="d-inline">EduLearn </h5>
+                    <span class="d-inline ms-2 text-muted">&copy;2025 EduLearn.com</span>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="text-light hover-underline">Cookies settings</a>
+                </div>
+                <div class="col-md-4 ">
+                    <h5 class="d-inline"><i class="bi bi-globe"></i>English</h5>
                 </div>
             </div>
         </div>
