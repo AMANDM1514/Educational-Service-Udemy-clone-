@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Skills - EduLearn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section {
+            margin-top: 76px;
+            padding: 50px 0;
+        }
+
+        .topic-card {
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .topic-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .topic-list li {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .topic-list li:hover {
+            background: #e9ecef;
+            transform: translateX(10px);
+        }
+
+        .category-badge {
+            font-size: 0.8em;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: #e9ecef;
+            color: #6c757d;
+        }
+
+        .hover-underline {
+            text-decoration: none;
+        }
+
+        .hover-underline:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><b>EduLearn</b></a>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary px-4">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1 class="text-center mb-5">Popular and Trending Topics</h1>
+
+            <!-- Featured Topic Cards -->
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card topic-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" 
+                             class="card-img-top" 
+                             alt="Data Science"
+                             style="height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Science & Analytics</h5>
+                            <p class="card-text">Master the tools and techniques of data analysis, machine learning, and statistical modeling.</p>
+                            <span class="category-badge">250+ Courses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card topic-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" 
+                             class="card-img-top" 
+                             alt="Business Management"
+                             style="height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Business & Management</h5>
+                            <p class="card-text">Develop leadership skills and business acumen for the modern workplace.</p>
+                            <span class="category-badge">180+ Courses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card topic-card">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166" 
+                             class="card-img-top" 
+                             alt="Web Development"
+                             style="height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Learn to build modern, responsive websites and web applications.</p>
+                            <span class="category-badge">300+ Courses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card topic-card">
+                        <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a" 
+                             class="card-img-top" 
+                             alt="Digital Marketing"
+                             style="height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Master the latest digital marketing strategies and tools.</p>
+                            <span class="category-badge">150+ Courses</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card topic-card">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" 
+                             class="card-img-top" 
+                             alt="Artificial Intelligence"
+                             style="height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Artificial Intelligence</h5>
+                            <p class="card-text">Explore the cutting-edge world of AI and machine learning.</p>
+                            <span class="category-badge">120+ Courses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topics List -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-4">Top 50 Trending Topics</h2>
+                    <ol style="color: #764ba2; line-height: 2.5;">
+                        <li><b>Python</b> <span class="text-muted">Popular in Programming Languages</span></li>
+                        <li><b>Microsoft Excel</b> <span class="text-muted">Popular in Microsoft</span></li>
+                        <li><b>Web Development</b> <span class="text-muted">Popular in Web Development</span></li>
+                        <li><b>Data Science</b> <span class="text-muted">Popular in Data Science</span></li>
+                        <li><b>PMI Project Management Professional (PMP)</b> <span class="text-muted">Popular in Project Management</span></li>
+                        <li><b>Microsoft Power BI</b> <span class="text-muted">Popular in Business Analytics & Intelligence</span></li>
+                        <li><b>SQL</b> <span class="text-muted">Popular in Business Analytics & Intelligence</span></li>
+                        <li><b>JavaScript</b> <span class="text-muted">Popular in Web Development</span></li>
+                        <li><b>Digital Marketing</b> <span class="text-muted">Popular in Digital Marketing</span></li>
+                        <li><b>AWS Certified Cloud Practitioner</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>AWS Certified Solutions Architect - Associate</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Java</b> <span class="text-muted">Popular in Programming Languages</span></li>
+                        <li><b>Machine Learning</b> <span class="text-muted">Popular in Data Science</span></li>
+                        <li><b>ChatGPT</b> <span class="text-muted">Popular in Other Office Productivity</span></li>
+                        <li><b>React JS</b> <span class="text-muted">Popular in Programming Languages</span></li>
+                        <li><b>C# (programming language)</b> <span class="text-muted">Popular in Programming Languages</span></li>
+                        <li><b>Amazon AWS</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Ethical Hacking</b> <span class="text-muted">Popular in Network & Security</span></li>
+                        <li><b>Blender</b> <span class="text-muted">Popular in 3D & Animation</span></li>
+                        <li><b>CompTIA A+</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Project Management</b> <span class="text-muted">Popular in Project Management</span></li>
+                        <li><b>English Language</b> <span class="text-muted">Popular in Language Learning</span></li>
+                        <li><b>Unity</b> <span class="text-muted">Popular in Game Development</span></li>
+                        <li><b>Stock Trading</b> <span class="text-muted">Popular in Investing & Trading</span></li>
+                        <li><b>C++ (programming language)</b> <span class="text-muted">Popular in Programming Languages</span></li>
+                        <li><b>Kubernetes</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Cisco Certified Network Associate (CCNA)</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Unreal Engine</b> <span class="text-muted">Popular in Game Development</span></li>
+                        <li><b>CompTIA Security+</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Information Security</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                        <li><b>Docker</b> <span class="text-muted">Popular in Software Development Tools</span></li>
+                        <li><b>Data Modeling</b> <span class="text-muted">Popular in Business Analytics & Intelligence</span></li>
+                        <li><b>Data Analysis</b> <span class="text-muted">Popular in Business Analytics & Intelligence</span></li>
+                        <li><b>Cybersecurity</b> <span class="text-muted">Popular in Network & Security</span></li>
+                        <li><b>Investing</b> <span class="text-muted">Popular in Investing & Trading</span></li>
+                        <li><b>WordPress</b> <span class="text-muted">Popular in Web Development</span></li>
+                        <li><b>Graphic Design</b> <span class="text-muted">Popular in Graphic Design & Illustration</span></li>
+                        <li><b>Drawing</b> <span class="text-muted">Popular in Arts & Crafts</span></li>
+                        <li><b>Linux</b> <span class="text-muted">Popular in Operating Systems & Servers</span></li>
+                        <li><b>Angular</b> <span class="text-muted">Popular in Web Development</span></li>
+                        <li><b>Cryptocurrency</b> <span class="text-muted">Popular in Cryptocurrency & Blockchain</span></li>
+                        <li><b>Google Flutter</b> <span class="text-muted">Popular in Mobile Development</span></li>
+                        <li><b>Artificial Intelligence (AI)</b> <span class="text-muted">Popular in Data Science</span></li>
+                        <li><b>Financial Analysis</b> <span class="text-muted">Popular in Financial Modeling & Analysis</span></li>
+                        <li><b>Life Coach Training</b> <span class="text-muted">Popular in Personal Transformation</span></li>
+                        <li><b>Deep Learning</b> <span class="text-muted">Popular in Data Science</span></li>
+                        <li><b>Adobe Photoshop</b> <span class="text-muted">Popular in Graphic Design & Illustration</span></li>
+                        <li><b>PMI PMBOK</b> <span class="text-muted">Popular in Project Management</span></li>
+                        <li><b>CSS</b> <span class="text-muted">Popular in Web Development</span></li>
+                        <li><b>AWS Certified Developer - Associate</b> <span class="text-muted">Popular in IT Certifications</span></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as original) -->
+    <footer class="bg-dark text-light py-4">
+        <!-- Third Line -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 style="margin-bottom: 15px;"><b>About</b></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light hover-underline">About us</a></li>
+                        <li><a href="#" class="text-light hover-underline">Contact us</a></li>
+                        <li><a href="#" class="text-light hover-underline">Blog</a></li>
+                        <li><a href="#" class="text-light hover-underline">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 style="margin-bottom: 15px;"><b>Discovery EduLearn</b></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light hover-underline">Get the app</a></li>
+                        <li><a href="#" class="text-light hover-underline">Teach on EduLearn</a></li>
+                        <li><a href="#" class="text-light hover-underline">Plans and Pricing</a></li>
+                        <li><a href="#" class="text-light hover-underline">Help and Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 style="margin-bottom: 15px;"><b>Legal & Accessibility</b></h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light hover-underline">Accessibility statement</a></li>
+                        <li><a href="#" class="text-light hover-underline">Privacy policy</a></li>
+                        <li><a href="#" class="text-light hover-underline">Sitemap</a></li>
+                        <li><a href="#" class="text-light hover-underline">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="bg-light">
+
+            <!-- Footer Inside Footer -->
+            <div class="row">
+                <div class="col-md-4 float-left">
+                    <h4 class="d-inline">EduLearn </h4>
+                    <span class="d-inline ms-2 text-muted">&copy;2025 EduLearn.com</span>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="text-light hover-underline">Cookies settings</a>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="d-inline">
+                        <img src="https://png.pngtree.com/png-vector/20220131/ourlarge/pngtree-black-world-icon-circle-symbol-web-vector-png-image_23593132.jpg"
+                            alt="globe" style="width: 23px; height: 21px;">
+                        English
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
