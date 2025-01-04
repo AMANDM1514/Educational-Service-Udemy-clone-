@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands-on Training - EduLearn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            margin-top: 76px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .hover-underline {
+            text-decoration: none;
+        }
+
+        .hover-underline:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header (Same as main page) -->
+    <header class="fixed-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="Educational_service.html"><b>EduLearn</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Educational_service.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+                        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Hands-on Training</h1>
+            <p class="lead mb-4">Learn by doing with real-world projects and practical experience</p>
+            <a href="#projects" class="btn btn-primary btn-lg px-5">Explore Projects</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Our Hands-on Training?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon bg-primary bg-gradient mx-auto">
+                            <i class="fas fa-laptop-code text-white fs-4"></i>
+                        </div>
+                        <h4>Real-world Projects</h4>
+                        <p>Work on actual industry projects that simulate real work environments</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon bg-success bg-gradient mx-auto">
+                            <i class="fas fa-users text-white fs-4"></i>
+                        </div>
+                        <h4>Expert Mentorship</h4>
+                        <p>Get guidance from industry professionals with years of experience</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="feature-icon bg-warning bg-gradient mx-auto">
+                            <i class="fas fa-certificate text-white fs-4"></i>
+                        </div>
+                        <h4>Industry Certification</h4>
+                        <p>Earn certificates recognized by top companies worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-5 bg-light" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Projects</h2>
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card shadow-sm h-100">
+                        <img src="images/ecommerce-project.jpg" class="card-img-top" 
+                             alt="E-commerce Project"
+                             onerror="this.src='https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600'">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Website</h5>
+                            <p class="card-text">Build a full-stack e-commerce platform using modern web technologies
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Web Development</span>
+                                <a href="#" class="btn btn-outline-primary">Start Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card shadow-sm h-100">
+                        <img src="images/mobile-app-project.jpg" class="card-img-top"
+                             alt="Mobile App Project"
+                             onerror="this.src='https://images.unsplash.com/photo-1526498460520-4c246339dccb?w=800&h=600'">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App Development</h5>
+                            <p class="card-text">Create a cross-platform mobile app using React Native</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-success">Mobile Development</span>
+                                <a href="#" class="btn btn-outline-primary">Start Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card shadow-sm h-100">
+                        <img src="images/data-analysis-project.jpg" class="card-img-top"
+                             alt="Data Analysis Project"
+                             onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600'">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analysis</h5>
+                            <p class="card-text">Analyze real-world datasets using Python and Machine Learning</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-warning">Data Science</span>
+                                <a href="#" class="btn btn-outline-primary">Start Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Start Your Journey?</h2>
+            <p class="lead mb-4">Join thousands of learners who have advanced their careers through our hands-on
+                training</p>
+            <a href="signup.html" class="btn btn-primary btn-lg px-5">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light mb-0 py-4">
+        <div class="row" style="margin-top: 40px; margin-left: 100px;">
+            <div class="col-md-4">
+                <h6 style="margin-bottom: 15px;"><b>About</b></h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light hover-underline">About us</a></li>
+                    <li><a href="#" class="text-light hover-underline">Contact us</a></li>
+                    <li><a href="#" class="text-light hover-underline">Blog</a></li>
+                    <li><a href="#" class="text-light hover-underline">Careers</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 style="margin-bottom: 15px;"><b>Discovery EduLearn</b></h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light hover-underline">Get the app</a></li>
+                    <li><a href="#" class="text-light hover-underline">Teach on EduLearn</a></li>
+                    <li><a href="#" class="text-light hover-underline">Plans and Pricing</a></li>
+                    <li><a href="#" class="text-light hover-underline">Help and Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 style="margin-bottom: 15px;"><b>Legal & Accessibility</b></h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light hover-underline">Accessibility statement</a></li>
+                    <li><a href="#" class="text-light hover-underline">Privacy policy</a></li>
+                    <li><a href="#" class="text-light hover-underline">Sitemap</a></li>
+                    <li><a href="#" class="text-light hover-underline">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </section>
+
+        <hr class="bg-light">
+
+        <!-- Footer Inside Footer -->
+        <footer class="bg-dark text-light py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 float-left">
+                        <h4 class="d-inline">EduLearn </h4>
+                        <span class="d-inline ms-2 text-muted">&copy;2025 EduLearn.com</span>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class="text-light hover-underline">Cookies settings</a>
+                    </div>
+                    <div class="col-md-4 ">
+                        <h5 class="d-inline"><img
+                                src="https://png.pngtree.com/png-vector/20220131/ourlarge/pngtree-black-world-icon-circle-symbol-web-vector-png-image_23593132.jpg"
+                                alt="globe" style="width: 23px; height: 21px;">English</h5>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
