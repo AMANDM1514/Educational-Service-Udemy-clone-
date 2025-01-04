@@ -82,15 +82,44 @@
         .hover-underline:hover {
             text-decoration: underline;
         }
+
+        .learning-goals-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .learning-goals-card.active {
+            transform: translateX(10px);
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .info-card {
+            transition: all 0.3s ease;
+        }
+
+        .info-card.active {
+            display: block;
+        }
+
+        .carousel-inner {
+            width: 100%;
+            transition: transform 0.9s ease;
+        }
+
+        .carousel-inner .carousel-item:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 
 <body>
     <!-- Header -->
     <header class="fixed-header">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">EduLearn</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png" alt="EduLearn Logo"
+                    style="height: 43px; width: 43px; margin-left: 2px; margin-right: 4px;">
+                <a class="navbar-brand" href="#"><b>EduLearn</b></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -105,15 +134,25 @@
                                 Courses
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Web Development</a></li>
-                                <li><a class="dropdown-item" href="#">Mobile Development</a></li>
-                                <li><a class="dropdown-item" href="#">Data Science</a></li>
-                                <li><a class="dropdown-item" href="#">Cloud Computing</a></li>
-                                <li><a class="dropdown-item" href="#">Artificial Intelligence</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.coursera.org/courses?query=web%20development">Web
+                                        Development</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.coursera.org/courses?query=mobile%20app%20development">Mobile
+                                        Development</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.coursera.org/courses?query=data%20science">Data Science</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.coursera.org/browse/information-technology/cloud-computing">Cloud
+                                        Computing</a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.coursera.org/courses?query=artificial%20intelligence">Artificial
+                                        Intelligence</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">View All Courses</a></li>
+                                <li><a class="dropdown-item" href="#about-footer">View All Courses</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -143,6 +182,11 @@
     <!-- Carousel Section -->
     <section class="carousel-section" style="margin-top: 76px;">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div> -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-content"
@@ -192,7 +236,8 @@
                                         counseling<br>
                                         ✓ Lifetime Access ✓ Mobile Learning ✓ Course Updates</p>
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <button class="btn btn-primary btn-lg px-4">Claim Discount</button>
+                                        <a href="login.html">
+                                            <button class="btn btn-primary btn-lg px-4">Claim Discount</button></a>
                                         <p class="mb-0">Use Code: <span
                                                 class="badge bg-light text-dark">STUDENT20</span></p>
                                     </div>
@@ -229,7 +274,8 @@
     <!-- Featured Courses -->
     <section class="py-5" id="featured-courses">
         <div class="container">
-            <h2 class="text-center mb-4">Featured Courses</h2>
+            <h1 class="text-center mb-4" style="font-family: 'Times New Roman', Times, serif;"><b>Featured Courses</b>
+            </h1>
             <div class="row">
                 <!-- Course Card 1 -->
                 <div class="col-lg-4 col-md-6">
@@ -241,7 +287,9 @@
                             <p class="card-text">Learn web development from scratch to pro level.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="text-primary">₹320</span>
-                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                <a href="enroll1.html" target="_blank">
+                                    <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -257,7 +305,9 @@
                             <p class="card-text">Master the principles of modern UI/UX design.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="text-primary">₹300</span>
-                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                <a href="enroll2.html" target="_blank">
+                                    <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +323,9 @@
                             <p class="card-text">Learn to grow your business with digital marketing.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="text-primary">₹260</span>
-                                <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                <a href="enroll3.html" target="_blank">
+                                    <button class="btn btn-outline-primary btn-sm">Enroll Now</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -286,10 +338,12 @@
     <!-- Categories Section -->
     <section class="py-5 bg-light" id="categories">
         <div class="container">
-            <h2 class="text-center mb-4">Popular Categories</h2>
+            <h1 class="text-center mb-4" style="font-family: 'Times New Roman', Times, serif;"><b>Popular Categories</b>
+            </h1>
             <div class="row g-4">
                 <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
+                    <div class="card text-center shadow-sm">
+                        <img src="programming_raw.jpg" class="card-img-top" alt="programming">
                         <div class="card-body">
                             <i class="fas fa-code fs-1 text-primary mb-3"></i>
                             <h5>Programming</h5>
@@ -298,7 +352,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
+                    <div class="card text-center shadow-sm">
+                        <img src="design_raw.jpg" class="card-img-top" alt="design">
                         <div class="card-body">
                             <i class="fas fa-palette fs-1 text-success mb-3"></i>
                             <h5>Design</h5>
@@ -307,7 +362,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
+                    <div class="card text-center shadow-sm">
+                        <img src="business_raw.jpg" class="card-img-top" alt="business">
                         <div class="card-body">
                             <i class="fas fa-chart-line fs-1 text-warning mb-3"></i>
                             <h5>Business</h5>
@@ -316,7 +372,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="card text-center">
+                    <div class="card text-center shadow-sm">
+                        <img src="language_raw.jpg" class="card-img-top" alt="language">
                         <div class="card-body">
                             <i class="fas fa-language fs-1 text-danger mb-3"></i>
                             <h5>Languages</h5>
@@ -331,7 +388,8 @@
     <!-- Dream Jobs Section -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Launch Your Career at <span class="text-primary">Top Companies</span></h2>
+            <h1 class="text-center mb-4" style="font-family: 'Times New Roman', Times, serif;"><b>Launch Your Career at
+                    <span class="text-primary">Top Companies</span></b></h1>
             <p class="text-center mb-5">Our graduates work at leading technology companies worldwide</p>
             <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-center align-items-center">
                 <!-- Company logos with hover effect -->
@@ -398,25 +456,17 @@
                     <div class="row g-4">
                         <!-- Card 1 - Hands-on Training -->
                         <div class="col-12">
-                            <div class="card shadow-sm h-100 learning-goals-card" 
-                            style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
+                            <div class="card shadow-sm h-100 learning-goals-card active" data-target="hands-on-training"
+                                style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
                                 <div class="card-body p-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h4 class="mb-3">Hands-on Training</h4>
-                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Practice with real-world projects and gain
-                                                practical experience through interactive exercises and industry-relevant
-                                                assignments.</p>
-                                                <a href="#" class="text-primary text-decoration-none">
-                                                    Find out more
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                                                    </svg>
-                                                </a>
+                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Practice with
+                                                real-world projects and gain practical experience.</p>
+                                            <a href="hands_on_training.html" target="_blank"
+                                                class="text-primary text-decoration-none">Find out more ></a>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -424,24 +474,17 @@
 
                         <!-- Card 2 - Certificate Preparation -->
                         <div class="col-12">
-                            <div class="card shadow-sm h-100 learning-goals-card"
-                            style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
+                            <div class="card shadow-sm h-100 learning-goals-card" data-target="certificate-preparation"
+                                style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
                                 <div class="card-body p-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h4 class="mb-3">Certificate Preparation</h4>
-                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Get ready for industry-recognized certifications
-                                                with our specialized preparation courses and mock exams.</p>
-                                                <a href="#" class="text-primary text-decoration-none">
-                                                    Find out more
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                                                    </svg>
-                                                </a>
+                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Get ready for
+                                                industry-recognized certifications with our specialized courses.</p>
+                                            <a href="certificate_preparation.html" target="_blank"
+                                                class="text-primary text-decoration-none">Find out more ></a>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -449,24 +492,17 @@
 
                         <!-- Card 3 - Insights Analytics -->
                         <div class="col-12">
-                            <div class="card shadow-sm h-100 learning-goals-card"
-                            style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
+                            <div class="card shadow-sm h-100 learning-goals-card" data-target="insights-analytics"
+                                style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
                                 <div class="card-body p-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h4 class="mb-3">Insights Analytics</h4>
-                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Track your progress with detailed analytics and
-                                                personalized insights to optimize your learning journey.</p>
-                                                <a href="#" class="text-primary text-decoration-none">
-                                                    Find out more
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                                                    </svg>
-                                                </a>
+                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Track your progress
+                                                with detailed analytics and personalized insights.</p>
+                                            <a href="insights_analytics.html" target="_blank"
+                                                class="text-primary text-decoration-none">Find out more ></a>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -474,24 +510,17 @@
 
                         <!-- Card 4 - Customizable Content -->
                         <div class="col-12">
-                            <div class="card shadow-sm h-100 learning-goals-card"
-                            style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
+                            <div class="card shadow-sm h-100 learning-goals-card" data-target="customizable-content"
+                                style="border-left: 10px solid rgba(188, 0, 236, 0.916); border-radius: 10px;">
                                 <div class="card-body p-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h4 class="mb-3">Customizable Content</h4>
-                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Tailor your learning experience with personalized
-                                                content recommendations and flexible learning paths.</p>
-                                                <a href="#" class="text-primary text-decoration-none">
-                                                    Find out more
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                                        <path fill-rule="evenodd"
-                                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                                                    </svg>
-                                                </a>
+                                            <p class="text-muted mb-0" style="padding-bottom: 10px;">Tailor your
+                                                learning experience with personalized content recommendations.</p>
+                                            <a href="customizable_content.html" target="_blank"
+                                                class="text-primary text-decoration-none">Find out more ></a>
                                         </div>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -499,47 +528,76 @@
                     </div>
                 </div>
 
-                <!-- Right Side - Platform Info Card -->
+                <!-- Right Side - Info Cards -->
                 <div class="col-lg-5">
-                    <div class="card border-0 bg-primary shadow p-3 text-white h-100" style="border-radius: 15px; background: linear-gradient(120deg, #89f7fe, #8266ff);">
-                        <div class="card-body p-5">
-                            <h2 class="display-6 mb-4">Transform Your Future with EduLearn</h2>
-                            <p class="lead mb-4">Join our innovative learning platform designed to help you achieve your
-                                career goals.</p>
-                            <div class="mb-4">
-                                <h5 class="mb-3">Why Choose Us:</h5>
-                                <ul class="list">
-                                    <li class="mb-2">
-                                        <i class="fas fa-check-circle me-2"></i>
-                                        Industry-aligned curriculum
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="fas fa-check-circle me-2"></i>
-                                        Expert instructors
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="fas fa-check-circle me-2"></i>
-                                        Flexible learning schedule
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="fas fa-check-circle me-2"></i>
-                                        Career support services
-                                    </li>
+                    <!-- Hands-on Training Info -->
+                    <div class="info-card active" id="hands-on-training">
+                        <div class="card border-0 bg-primary shadow p-3 text-white h-100"
+                            style="border-radius: 15px; background: linear-gradient(120deg, #89f7fe, #8266ff);">
+                            <div class="card-body p-5">
+                                <h2 class="display-6 mb-4"><b>Hands-on Training</b></h2>
+                                <p class="lead mb-4">Practice with real-world projects and gain practical experience
+                                    through interactive exercises.</p>
+                                <ul class="list mb-4">
+                                    <li class="mb-2">✓ Real-world projects</li>
+                                    <li class="mb-2">✓ Interactive exercises</li>
+                                    <li class="mb-2">✓ Industry-relevant assignments</li>
+                                    <li class="mb-2">✓ Practical experience</li>
                                 </ul>
                             </div>
-                            <div class="mt-4">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="display-4 me-3">70K+</div>
-                                    <div>Active learners worldwide</div>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <div class="display-4 me-3">27K+</div>
-                                    <div>Access to top courses</div>
-                                </div>
-                                <div class="d-flex align-items-center mt-2">
-                                    <div class="display-4 me-3">95%</div>
-                                    <div>Course completion rate</div>
-                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Preparation Info -->
+                    <div class="info-card" id="certificate-preparation">
+                        <div class="card border-0 bg-primary shadow p-3 text-white h-100"
+                            style="border-radius: 15px; background: linear-gradient(120deg, #FF9A9E, #FAD0C4);">
+                            <div class="card-body p-5">
+                                <h2 class="display-6 mb-4"><b>Certificate Preparation</b></h2>
+                                <p class="lead mb-4">Get ready for industry-recognized certifications with our
+                                    specialized preparation courses.</p>
+                                <ul class="list mb-4">
+                                    <li class="mb-2">✓ Specialized preparation courses</li>
+                                    <li class="mb-2">✓ Practice mock exams</li>
+                                    <li class="mb-2">✓ Industry-recognized certifications</li>
+                                    <li class="mb-2">✓ Expert guidance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insights Analytics Info -->
+                    <div class="info-card" id="insights-analytics">
+                        <div class="card border-0 bg-primary shadow p-3 text-white h-100"
+                            style="border-radius: 15px; background: linear-gradient(120deg, #A1C4FD, #C2E9FB);">
+                            <div class="card-body p-5">
+                                <h2 class="display-6 mb-4"><b>Insights Analytics</b></h2>
+                                <p class="lead mb-4">Track your progress with detailed analytics and personalized
+                                    insights to optimize your learning.</p>
+                                <ul class="list mb-4">
+                                    <li class="mb-2">✓ Detailed progress tracking</li>
+                                    <li class="mb-2">✓ Personalized insights</li>
+                                    <li class="mb-2">✓ Performance analytics</li>
+                                    <li class="mb-2">✓ Learning optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customizable Content Info -->
+                    <div class="info-card" id="customizable-content">
+                        <div class="card border-0 bg-primary shadow p-3 text-white h-100"
+                            style="border-radius: 15px; background: linear-gradient(120deg, #84FAB0, #8FD3F4);">
+                            <div class="card-body p-5">
+                                <h2 class="display-6 mb-4"><b>Customizable Content</b></h2>
+                                <p class="lead mb-4">Tailor your learning experience with personalized content
+                                    recommendations and flexible paths.</p>
+                                <ul class="list mb-4">
+                                    <li class="mb-2">✓ Personalized recommendations</li>
+                                    <li class="mb-2">✓ Flexible learning paths</li>
+                                    <li class="mb-2">✓ Adaptive content</li>
+                                    <li class="mb-2">✓ Custom learning schedule</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -551,8 +609,8 @@
     <!-- Subscription Section -->
     <section class="py-5 bg-light" id="subscription-plans">
         <div class="container">
-            <h2 class="display-4 text-center mb-2">Choose Your Learning Plan</h2>
-            <p class="text-muted text-center mb-5">Reach goals faster with one of our plans or programs. 
+            <h2 class="display-4 text-center mb-2"><b>Choose Your Learning Plan</b></h2>
+            <p class="text-muted text-center mb-5">Reach goals faster with one of our plans or programs.
                 Try one free today or contact sales to learn more.</p>
             <div class="row">
                 <!-- Monthly Subscription Card -->
@@ -664,10 +722,186 @@
         </div>
     </section>
 
-    <!-- Achivements section -->
-    <section>
+    <!-- Achievements Section -->
+    <section class="py-5">
+        <div class="container mb-5">
+            <h1 style=" margin-bottom: 0px;" style="font-family: 'Times New Roman', Times, serif;">See what others are
+                achieving through learning</h1>
+            <br><br>
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-3">
+                    <div class="media border shadow-sm p-4" style="border-radius: 10px;">
+                        <img src="bouble_quotation.png" class="align-self-end mr-3 mt-0 rounded-circle"
+                            style="width:30px; margin-bottom: 10px;">
+                        <div class="media-body">
+                            <p>Because of this course I was able to clear my two interviews...
+                                Thanks for making such wonderful content.</p><br><br>
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREX7pmiYsFUwA-opG0WKGaA5qlwdyLCe9uZg&s"
+                                    class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+                                <p class="text-muted mb-0 ms-3">Rajesh Kumar</p>
+                            </div><br>
+                            <a href="https://app.powerbi.com/singleSignOn?ru=https%3A%2F%2Fapp.powerbi.com%2F%3FnoSignUpCheck%3D1"
+                                target="_blank" class="text-primary text-decoration-none">Bussiness Intelligence(BI)
+                                ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-md-3">
+                    <div class="media border shadow-sm p-4" style="border-radius: 10px;">
+                        <img src="bouble_quotation.png" class="align-self-end mr-3 mt-0 rounded-circle"
+                            style="width:30px; margin-bottom: 10px;">
+                        <div class="media-body">
+                            <p>This has helped me so much in my career...I joined as a frontend engineer and eventually
+                                transitioned to full stack engineer with the help of this course.</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvXNsWL_dhhFJg8BxOod0n2GqiHjfhXtE_gg&s"
+                                    class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+                                <p class="text-muted mb-0 ms-3">Chetna Dixit</p>
+                            </div><br>
+                            <a href="https://www.coursera.org/courses?query=golang" target="_blank"
+                                class="text-primary text-decoration-none">Go (Golang) course. ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Column -->
+                <div class="col-md-3">
+                    <div class="media border shadow-sm p-4" style="border-radius: 10px;">
+                        <img src="bouble_quotation.png" class="align-self-end mr-3 mt-0 rounded-circle"
+                            style="width:30px; margin-bottom: 10px;">
+                        <div class="media-body">
+                            <p>Today, I am a software developer, and I credit a significant part of my success
+                                to the solid foundation laid by this course.</p><br>
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy_RCRQClvbxPN2cBbacu9Osa6aeoRtwoaBg&s"
+                                    class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+                                <p class="text-muted mb-0 ms-3">Swati Agrawal</p>
+                            </div><br>
+                            <a href="https://www.w3schools.com/java/" target="_blank"
+                                class="text-primary text-decoration-none">Java course ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Column -->
+                <div class="col-md-3">
+                    <div class="media border shadow-sm p-4" style="border-radius: 10px;">
+                        <img src="bouble_quotation.png" class="align-self-end mr-3 mt-0 rounded-circle"
+                            style="width:30px; margin-bottom: 10px;">
+                        <div class="media-body">
+                            <p>I would highly recommend this Web Development Bootcamp to anyone interested
+                                in pursuing a career in web development or looking to enhance their skills in this
+                                field.</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ3ztWTGwSgvZJvsA49k950OqfYRhhssQqaw&s"
+                                    class="rounded-circle " style="width:50px; height:50px; object-fit:cover;">
+                                <p class="text-muted mb-0 ms-3">Ankit Singh</p>
+                            </div><br>
+                            <a href="https://www.coursera.org/courses?query=web%20development" target="_blank"
+                                class="text-primary text-decoration-none">Web development course ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now Section -->
+    <section class="py-5 bg-light">
         <div class="container">
-            <h3 style="padding-left: 30px; margin-bottom: 0px;">See what others are achieving through learning</h3>
+            <h1 style="font-family: 'Times New Roman', Times, serif;"><b>Trending Now</b></h1>
+            <hr class="bg-secondary mb-4">
+            <div class="row g-5">
+                <div class="col-md-3">
+                    <h1 class="mb-4"><b>ChatGPT is a top skill</b></h1>
+                    <a href="https://www.coursera.org/courses?query=chatgpt" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>See ChatGPT courses ></b></h5>
+                    </a>
+                    <p class="text-muted">3,942,186 learners</p><br>
+                    <a href="trending_skills.html" target="_blank">
+                        <button type="button" class="btn btn-outline-dark btn-block px-5" style="padding: 12px;"><b>Show
+                                all trending skills</b></button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <h2><b>Development</b></h2><br>
+                    <a href="https://www.coursera.org/courses?query=python" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Python ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">46,776,606 learners</p>
+                    <a href="https://www.coursera.org/courses?query=web%20development" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Web Development ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">13,818,816 learners</p>
+                    <a href="https://pll.harvard.edu/subject/data-science" class="text-decoration-none" target="_blank">
+                        <h5 style="color:#5834f9"><b>Data Science ></b></h5>
+                    </a>
+                    <p class="text-muted ">7,602,906 learners</p>
+                </div>
+                <div class="col-md-3">
+                    <h2><b>Design</b></h2><br>
+                    <a href="https://www.cgboost.com/courses/free-blender-beginners-course" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Blender ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">2,830,963 learners</p>
+                    <a href="https://www.coursera.org/courses?query=graphic%20design" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Graphic Design ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">4,423,723 learners</p>
+                    <a href="https://www.coursera.org/courses?query=adobe%20photoshop" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Adobe Photoshop ></b></h5>
+                    </a>
+                    <p class="text-muted ">12,563,578 learners</p>
+                </div>
+                <div class="col-md-3">
+                    <h2><b>Business</b></h2><br>
+                    <a href="https://www.pmi.org/certifications/project-management-professional-pmp"
+                        class="text-decoration-none" target="_blank">
+                        <h5 style="color:#5834f9"><b>PMI Project Management Professional (PMP) ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">2,461,635 learners</p>
+                    <a href="https://www.coursera.org/courses?query=microsoft%20power%20bi" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Microsoft Power BI ></b></h5>
+                    </a>
+                    <p class="text-muted mb-4">4,450,251 learners</p>
+                    <a href="https://www.coursera.org/courses?query=project%20management" class="text-decoration-none"
+                        target="_blank">
+                        <h5 style="color:#5834f9"><b>Project Management ></b></h5>
+                    </a>
+                    <p class="text-muted ">3,818,968 learners</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-3">
+                    <h1 class="mb-4" style="font-family: 'Times New Roman', Times, serif;"><b>Top trends for the future
+                            of work</b></h1>
+                    <h6 class="mb-4">Our 2025 Global Learning & Skills Trends Report is out now! Find out how to build
+                        the skills to keep pace with change.</h6><br>
+                    <a href="get_the_report.html" target="_blank" class="text-decoration-none">
+                        <button type="button" class="btn btn-outline-dark btn-block px-3" style="padding: 10px;"><b>Get
+                                the report</b></button>
+                    </a>
+                </div>
+                <div class="col-md-9">
+                    <img src="blendBoard.png" style="width: 100%; height: 100%; border-radius: 10px;">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -676,8 +910,10 @@
 
         <!-- Header Inside Footer -->
         <header class="bg-dark text-light py-4">
-            <h5 style="padding-left: 30px; margin-bottom: 0px;"><strong>Top companies choose <span class="hover-underline" style="color:#8266ff">
-                EduLearn Business</span> to build in-demand career skills.</strong></h5>
+            <h5 style="padding-left: 30px; margin-bottom: 0px;"><strong>Top companies choose
+                    <a href="get_the_report.html" target="_blank" class="text-decoration-none">
+                        <span class="hover-underline" style="color:#8266ff">
+                            EduLearn Business</span></a> to build in-demand career skills.</strong></h5>
         </header>
         <hr class="bg-light">
         <!-- Body Inside Footer -->
@@ -688,28 +924,41 @@
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Certifications by Issuer</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Amazon Web Services (AWS) Certifications</a></li>
-                            <li><a href="#" class="text-light hover-underline">Microsoft Certifications</a></li>
-                            <li><a href="#" class="text-light hover-underline">Cisco Certifications</a></li>
-                            <li><a href="#" class="text-light hover-underline">Tableau Certifications</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=amazon%20web%20services%20(aws)%20certifications"
+                                    target="_blank" class="text-light hover-underline">Amazon Web Services (AWS)
+                                    Certifications</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=microsoft%20certifications"
+                                    target="_blank" class="text-light hover-underline">Microsoft Certifications</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=cisco%20certifications" target="_blank"
+                                    class="text-light hover-underline">Cisco Certifications</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=tableau%20certifications"
+                                    target="_blank" class="text-light hover-underline">Tableau Certifications</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Web Development</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Web Development</a></li>
-                            <li><a href="#" class="text-light hover-underline">JavaScript</a></li>
-                            <li><a href="#" class="text-light hover-underline">React JS</a></li>
-                            <li><a href="#" class="text-light hover-underline">Angular</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=web%20development" target="_blank"
+                                    class="text-light hover-underline">Web Development</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=javascript" target="_blank"
+                                    class="text-light hover-underline">JavaScript</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=react%20js" target="_blank"
+                                    class="text-light hover-underline">React JS</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=angular" target="_blank"
+                                    class="text-light hover-underline">Angular</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Leadership</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Leadership</a></li>
-                            <li><a href="#" class="text-light hover-underline">Management Skillst</a></li>
-                            <li><a href="#" class="text-light hover-underline">Project Management</a></li>
-                            <li><a href="#" class="text-light hover-underline">Personal Productivity</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=leadership" target="_blank"
+                                    class="text-light hover-underline">Leadership</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=management%20skills" target="_blank"
+                                    class="text-light hover-underline">Management Skillst</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=project%20management" target="_blank"
+                                    class="text-light hover-underline">Project Management</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=personal%20productivity" target="_blank"
+                                    class="text-light hover-underline">Personal Productivity</a></li>
                         </ul>
                     </div>
                 </div>
@@ -719,38 +968,81 @@
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Data Science</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Data Science</a></li>
-                            <li><a href="#" class="text-light hover-underline">Python</a></li>
-                            <li><a href="#" class="text-light hover-underline">Machine Learning</a></li>
-                            <li><a href="#" class="text-light hover-underline">Deep Learning</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=data%20science" target="_blank"
+                                    class="text-light hover-underline">Data Science</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=python" target="_blank"
+                                    class="text-light hover-underline">Python</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=machine%20learning" target="_blank"
+                                    class="text-light hover-underline">Machine Learning</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=deep%20learning" target="_blank"
+                                    class="text-light hover-underline">Deep Learning</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Communication</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Communication Skills</a></li>
-                            <li><a href="#" class="text-light hover-underline">Presentation Skills</a></li>
-                            <li><a href="#" class="text-light hover-underline">Public Speaking</a></li>
-                            <li><a href="#" class="text-light hover-underline">Writing</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=communication%20skills" target="_blank"
+                                    class="text-light hover-underline">Communication Skills</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=presentation%20skills" target="_blank"
+                                    class="text-light hover-underline">Presentation Skills</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=public%20speaking" target="_blank"
+                                    class="text-light hover-underline">Public Speaking</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=writing" target="_blank"
+                                    class="text-light hover-underline">Writing</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">
                         <h6 style="margin-bottom: 15px;"><b>Business Analytics & Intelligence</b></h6>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-light hover-underline">Microsoft Excel</a></li>
-                            <li><a href="#" class="text-light hover-underline">SQL</a></li>
-                            <li><a href="#" class="text-light hover-underline">Microsoft Power BI</a></li>
-                            <li><a href="#" class="text-light hover-underline">Data Analysis</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=microsoft%20excel" target="_blank"
+                                    class="text-light hover-underline">Microsoft Excel</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=sql" target="_blank"
+                                    class="text-light hover-underline">SQL</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=microsoft%20power%20bi" target="_blank"
+                                    class="text-light hover-underline">Microsoft Power BI</a></li>
+                            <li><a href="https://www.coursera.org/courses?query=data%20analysis" target="_blank"
+                                    class="text-light hover-underline">Data Analysis</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Third Line -->
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-4">
+                        <h6 style="margin-bottom: 15px;"><b>About</b></h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light hover-underline">About us</a></li>
+                            <li><a href="#" class="text-light hover-underline">Contact us</a></li>
+                            <li><a href="#" class="text-light hover-underline">Blog</a></li>
+                            <li><a href="#" class="text-light hover-underline">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 style="margin-bottom: 15px;"><b>Discovery EduLearn</b></h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light hover-underline">Get the app</a></li>
+                            <li><a href="#" class="text-light hover-underline">Teach on EduLearn</a></li>
+                            <li><a href="#" class="text-light hover-underline">Plans and Pricing</a></li>
+                            <li><a href="#" class="text-light hover-underline">Help and Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 style="margin-bottom: 15px;"><b>Legal & Accessibility</b></h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light hover-underline">Accessibility statement</a></li>
+                            <li><a href="#" class="text-light hover-underline">Privacy policy</a></li>
+                            <li><a href="#" class="text-light hover-underline">Sitemap</a></li>
+                            <li><a href="#" class="text-light hover-underline">Terms & Conditions</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <hr class="bg-light">
 
         <!-- Footer Inside Footer -->
-        <footer class="bg-dark text-light py-3">
+        <footer class="bg-dark text-light py-3 ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 float-left">
@@ -761,8 +1053,9 @@
                         <a href="#" class="text-light hover-underline">Cookies settings</a>
                     </div>
                     <div class="col-md-4 ">
-                        <h5 class="d-inline"><img src="https://png.pngtree.com/png-vector/20220131/ourlarge/pngtree-black-world-icon-circle-symbol-web-vector-png-image_23593132.jpg" 
-                            alt="globe" style="width: 23px; height: 21px;">English</h5>
+                        <h5 class="d-inline"><img
+                                src="https://png.pngtree.com/png-vector/20220131/ourlarge/pngtree-black-world-icon-circle-symbol-web-vector-png-image_23593132.jpg"
+                                alt="globe" style="width: 23px; height: 21px;">English</h5>
                     </div>
                 </div>
             </div>
@@ -805,6 +1098,37 @@
                     $(this).removeClass('shadow-lg');
                 }
             );
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hide all info cards except the first one initially
+            const infoCards = document.querySelectorAll('.info-card');
+            infoCards.forEach((card, index) => {
+                if (index !== 0) card.style.display = 'none';
+            });
+
+            // Add click handlers to learning goals cards
+            const learningCards = document.querySelectorAll('.learning-goals-card');
+            learningCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    // Remove active class from all cards
+                    learningCards.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to clicked card
+                    this.classList.add('active');
+
+                    // Hide all info cards
+                    infoCards.forEach(infoCard => {
+                        infoCard.style.display = 'none';
+                    });
+
+                    // Show the corresponding info card
+                    const targetId = this.getAttribute('data-target');
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
         });
     </script>
 </body>
