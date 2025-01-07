@@ -1,6 +1,6 @@
 # Educational-Service-Udemy-clone-
 
-#EduLearn
+# EduLearn
 <p>EduLearn is a free and paid educational service platform designed to empower students pursuing engineering and management courses. With a user-friendly interface, it offers a diverse range of online courses that cater to various specializations, from computer science, Artificial intelligence, Machine learning to business administration and project management. With a focus on practical knowledge and real-world applications, EduLearn combines expert-led video lectures, interactive assignments, and collaborative projects to enhance the learning experience. EduLearn is committed to equipping students with the skills needed to excel in their careers and tailored to meet industry demands. </p>
 
 <h2>Features: </h2>
